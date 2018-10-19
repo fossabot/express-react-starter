@@ -11,6 +11,9 @@
     "trans:extract": "babel --config-file=scripts/options/.babelrc \"extracted/**/*.jsx\"",
     "trans:manage": "tsc scripts/translation.ts && node scripts/translation.js",
     "translate:frontend": "npm run trans:compile && npm run trans:extract && npm run trans:manage",
+
+    "run:backend": "NODE_PATH=./backend/src node ./backend/scripts/backend.js",
+    "build:backend": "cd backend && tsc",
     "tslint": "tslint --project frontend"
   },
   "repository": {
