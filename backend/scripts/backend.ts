@@ -25,8 +25,8 @@ let server: http.Server | https.Server = null;
 if (process.env.NODE_ENV === "production") {
     let options = {};
     options = {
-        cert: fs.readFileSync("/etc/letsencrypt/live/promotool.sidia.net/fullchain.pem"),
-        key: fs.readFileSync("/etc/letsencrypt/live/promotool.sidia.net/privkey.pem")
+        cert: fs.readFileSync("/etc/letsencrypt/live/.../fullchain.pem"),
+        key: fs.readFileSync("/etc/letsencrypt/live/.../privkey.pem")
     };
     server = https.createServer(options, app);
 } else {

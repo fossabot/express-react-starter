@@ -11,8 +11,8 @@ const port = 80;
 app.use(express.static("public/frontend/"));
 
 let options = {
-    cert: fs.readFileSync("/etc/letsencrypt/live/promotool.sidia.net/fullchain.pem"),
-    key: fs.readFileSync("/etc/letsencrypt/live/promotool.sidia.net/privkey.pem")
+    cert: fs.readFileSync("/etc/letsencrypt/live/.../fullchain.pem"),
+    key: fs.readFileSync("/etc/letsencrypt/live/.../privkey.pem")
 };
 
 http.createServer(app).listen(80);

@@ -14,7 +14,11 @@
 
     "run:backend": "NODE_PATH=./backend/src node ./backend/scripts/backend.js",
     "build:backend": "cd backend && tsc",
-    "tslint": "tslint --project frontend"
+
+    "tslint:frontend": "tslint --project frontend",
+    "tslint:backend": "tslint --project backend",
+
+    "tslint": "npm run tslint:frontend && npm run tslint:backend"
   },
   "repository": {
     "type": "git",
