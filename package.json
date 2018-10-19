@@ -10,7 +10,8 @@
     "trans:compile": "tsc -p . --target ES6 --module es6 --jsx preserve --outDir extracted",
     "trans:extract": "babel --config-file=scripts/options/.babelrc \"extracted/**/*.jsx\"",
     "trans:manage": "tsc scripts/translation.ts && node scripts/translation.js",
-    "translate:frontend": "npm run trans:compile && npm run trans:extract && npm run trans:manage"
+    "translate:frontend": "npm run trans:compile && npm run trans:extract && npm run trans:manage",
+    "tslint": "tslint --project frontend"
   },
   "repository": {
     "type": "git",
