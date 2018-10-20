@@ -15,13 +15,15 @@
     "moduleResolution": "node",
     "sourceMap": true,
     "allowJs": true,
-    "baseUrl": "./src"
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*", "../shared/src/*"]
+    }
   },
-  "include": [
-    "src/**/*"
-  ],
+
   "exclude": [
     "node_modules",
-    "public"
+    "public",
+    "webpack.*.js"
   ]
 }

@@ -20,6 +20,7 @@ const config = {
         modules: [
             path.resolve(__dirname, "src"),
             path.resolve(__dirname, "../node_modules"),
+            path.resolve(__dirname, "../shared/src")
         ]
     },
     module: {
