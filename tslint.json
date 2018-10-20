@@ -12,7 +12,7 @@
     "arrow-parens": false,
     "no-empty-interface": false,
     "eofline": false,
-    "member-ordering": [true]
+    "member-ordering": [true, {"order": "fields-first"}]
   },
   "rulesDirectory": [],
   "exclude": []

@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+// tslint:disable:no-console
 
 /**
  * Module dependencies.
@@ -13,7 +14,7 @@ import * as fs from "fs";
  * Get port from environment and store in Express.
  */
 
-const globalPort = normalizePort(process.env.PORT || "3000");
+const globalPort: number | string = normalizePort(process.env.PORT || "3000");
 app.set("port", globalPort);
 
 /**
@@ -23,8 +24,7 @@ app.set("port", globalPort);
 let server: http.Server | https.Server = null;
 
 if (process.env.NODE_ENV === "production") {
-    let options = {};
-    options = {
+    const options = {
         cert: fs.readFileSync("/etc/letsencrypt/live/.../fullchain.pem"),
         key: fs.readFileSync("/etc/letsencrypt/live/.../privkey.pem")
     };
