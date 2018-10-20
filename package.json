@@ -7,17 +7,14 @@
     "run:frontend": "tsc scripts/server.ts && node scripts/server.js",
     "dev:frontend": "webpack-dev-server --hot-only --host 0.0.0.0 --no-inline --config frontend/webpack.development.config.js",
     "build:frontend": "webpack --config frontend/webpack.production.config.js",
-    "trans:compile": "tsc -p . --target ES6 --module es6 --jsx preserve --outDir extracted",
-    "trans:extract": "babel --config-file=scripts/options/.babelrc \"extracted/**/*.jsx\"",
-    "trans:manage": "tsc scripts/translation.ts && node scripts/translation.js",
+    "trans:compile": "tsc -p ./frontend --target ES6 --module es6 --jsx preserve --outDir temp/extracted_locale",
+    "trans:extract": "babel \"temp/extracted_locale/**/*.jsx\"",
+    "trans:manage": "tsc scripts/TranslateFrontend.ts && node scripts/TranslateFrontend.js",
     "translate:frontend": "npm run trans:compile && npm run trans:extract && npm run trans:manage",
-
     "run:backend": "NODE_PATH=./backend/src node ./backend/scripts/backend.js",
     "build:backend": "cd backend && tsc",
-
     "tslint:frontend": "tslint --project frontend",
     "tslint:backend": "tslint --project backend",
-
     "tslint": "npm run tslint:frontend && npm run tslint:backend"
   },
   "repository": {
@@ -45,6 +42,8 @@
     "axios": "^0.18.0",
     "babel-cli": "^6.26.0",
     "babel-plugin-react-intl": "^3.0.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "cookie-parser": "^1.4.3",
     "cors": "^2.8.4",
     "css-loader": "^1.0.0",

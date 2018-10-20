@@ -11,7 +11,9 @@
     "object-literal-sort-keys": false,
     "arrow-parens": false,
     "no-empty-interface": false,
-    "eofline": false
+    "eofline": false,
+    "member-ordering": [true]
   },
-  "rulesDirectory": []
+  "rulesDirectory": [],
+  "exclude": []
 }

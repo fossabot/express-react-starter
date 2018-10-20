@@ -17,6 +17,6 @@ app.use(session({
     saveUninitialized: true
 }));
 
-app.use("/", indexRouter);
+app.use("/hello", indexRouter);
 
 export default app;

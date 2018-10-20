@@ -1,7 +1,7 @@
 import manageTranslations from "react-intl-translations-manager";
 
 manageTranslations({
-    messagesDirectory: "frontend/src/extracted/",
-    translationsDirectory: "frontend/src/locales/",
+    messagesDirectory: "./temp/extracted_locale/",
+    translationsDirectory: "./frontend/locales/",
     languages: ["de"]
 });
