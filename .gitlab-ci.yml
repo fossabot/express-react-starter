@@ -22,4 +22,4 @@ linting:
 jest:
   stage: test
   script:
-    - npm run jest
+    - npm run test
