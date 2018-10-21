@@ -16,5 +16,9 @@
     "semicolon": [true, "always", "ignore-bound-class-methods"]
   },
   "rulesDirectory": [],
-  "exclude": []
+  "linterOptions": {
+    "exclude": [
+      "*/jest.config.js"
+    ]
+  }
 }
