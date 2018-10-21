@@ -12,8 +12,13 @@
     "arrow-parens": false,
     "no-empty-interface": false,
     "eofline": false,
-    "member-ordering": [true, {"order": "fields-first"}]
+    "member-ordering": [true, {"order": "fields-first"}],
+    "semicolon": [true, "always", "ignore-bound-class-methods"]
   },
   "rulesDirectory": [],
-  "exclude": []
+  "linterOptions": {
+    "exclude": [
+      "*/jest.config.js"
+    ]
+  }
 }

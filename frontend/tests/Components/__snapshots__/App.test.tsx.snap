@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test App Component Reacts to click 1`] = `
+<Provider>
+  <IntlProvider
+    key="en"
+    locale="en"
+  >
+    <FormattedMessage
+      defaultMessage="Hello world"
+      id="sidia.hello_world"
+      values={Object {}}
+    />
+    <div
+      onClick={[Function]}
+    >
+      asdf
+    </div>
+  </IntlProvider>
+</Provider>
+`;
+
+exports[`Test App Component Renders correctly 1`] = `
+<Provider>
+  <IntlProvider
+    key="en"
+    locale="en"
+  >
+    <FormattedMessage
+      defaultMessage="Hello world"
+      id="sidia.hello_world"
+      values={Object {}}
+    />
+    <div
+      onClick={[Function]}
+    >
+      123
+    </div>
+  </IntlProvider>
+</Provider>
+`;
