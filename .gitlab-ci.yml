@@ -14,7 +14,12 @@ build:
     - npm install
     - npm run build:frontend
 
-test:
+linting:
   stage: test
   script:
     - npm run tslint
+
+jest:
+  stage: test
+  script:
+    - npm run jest
