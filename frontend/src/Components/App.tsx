@@ -13,10 +13,14 @@ export const localeData: any = {
     de: require("../../locales/de.json")
 };
 
+interface IAppState {
+    clicked: string;
+}
+
 /**
  * Standard app class that wraps everything
  */
-class App extends React.Component {
+class App extends React.Component<{}, IAppState> {
     private language = "en";
     private dependencies = {};
 
@@ -25,17 +29,32 @@ class App extends React.Component {
 
         addLocaleData([...en, ...de]);
         this.dependencies = this.generateDependencies();
+
+        this.state = {
+            clicked: "123"
+        };
     }
 
     public render() {
         return <Provider>
             <IntlProvider  messages={localeData[this.language]} key={this.language} locale={this.language}>
-                <FormattedMessage
-                    defaultMessage="Hello world"
-                    id="sidia.hello_world"
-                />
+                <React.Fragment>
+                    <FormattedMessage
+                        defaultMessage="Hello world"
+                        id="sidia.hello_world"
+                    />
+                    <div onClick={this.onClick}>
+                        {this.state.clicked}
+                    </div>
+                </React.Fragment>
             </IntlProvider>
         </Provider>;
+    }
+
+    public onClick = () => {
+        this.setState({
+            clicked: "asdf"
+        });
     }
 
     private generateDependencies() {
