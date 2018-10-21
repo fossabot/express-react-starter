@@ -10,7 +10,7 @@ import LogService from "Services/LogService";
 import {ELogLevel} from "Services/AbstractLogService";
 
 export const localeData: any = {
-    de: require("../locales/de.json")
+    de: require("../../locales/de.json")
 };
 
 /**
