@@ -1,6 +1,6 @@
 {
   "name": "express-react-starter",
-  "version": "0.0.1-alpha",
+  "version": "0.0.1-beta",
   "description": "A react + express starter",
   "main": "index.js",
   "scripts": {
