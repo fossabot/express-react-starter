@@ -1,5 +1,5 @@
 {
-  "defaultSeverity": "warning",
+  "defaultSeverity": "error",
   "extends": [
     "tslint:recommended"
   ],
@@ -18,7 +18,8 @@
   "rulesDirectory": [],
   "linterOptions": {
     "exclude": [
-      "*/jest.config.js"
+      "*/jest.config.js",
+      "*/coverage/*"
     ]
   }
 }
