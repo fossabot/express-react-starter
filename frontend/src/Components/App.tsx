@@ -35,6 +35,9 @@ class App extends React.Component<{}, IAppState> {
         };
     }
 
+    /**
+     * test
+     */
     public render() {
         return <Provider>
             <IntlProvider  messages={localeData[this.language]} key={this.language} locale={this.language}>
